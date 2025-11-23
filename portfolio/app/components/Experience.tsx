@@ -47,7 +47,7 @@ export default function Experience() {
               <span className="timeline-dot" />
               <div className="timeline-title">ML & MLOps Side Projects</div>
               <div className="timeline-meta">
-                RAG chatbots • Dashboards
+                Personal growth • Experimentation • Deployment
               </div>
               <p className="timeline-desc">
                 Built pipelines with proper experimentation, evaluation and

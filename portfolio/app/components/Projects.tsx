@@ -3,7 +3,7 @@ export default function Projects() {
     <section id="projects" className="section">
       <div className="section-header">
         <div className="section-kicker">Selected work</div>
-        <h2 className="section-title">Projects where data meets product.</h2>
+        <h2 className="section-title">Projects</h2>
       </div>
 
       <div className="projects-grid">
@@ -14,8 +14,7 @@ export default function Projects() {
             <h3 className="project-title">Agri-Hope Marketplace</h3>
             <p className="project-desc">
                 Full-stack marketplace for small farmers with an integrated AI
-                assistant helping with crop decisions and marketplace
-                navigation.
+                assistant.
             </p>
             <div className="project-tech-row">
                 <span className="project-tech">Next.js</span>
@@ -24,7 +23,7 @@ export default function Projects() {
             </div>
             </div>
             <div className="project-links">
-            <a href="#" className="project-link">
+            <a href="https://wie-act-esprit.vercel.app" target="_blank" className="project-link">
                 Live demo
             </a>
             </div>

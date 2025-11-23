@@ -139,6 +139,45 @@ body {
   background: linear-gradient(90deg, var(--accent), var(--accent-soft));
   transition: width 0.22s ease-out;
 }
+/* Reset ugly button styles */
+.clean-link {
+  background: none;
+  border: none;
+  color: #dbe4f5;
+  font-size: 0.95rem;
+  letter-spacing: 1.4px;
+  padding: 6px 4px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover – text color change */
+.clean-link:hover {
+  color: #00eaff;
+}
+
+/* Underline animation */
+.clean-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #00eaff;
+  transition: width 0.3s ease;
+}
+
+.clean-link:hover::after {
+  width: 100%;
+}
+
+/* Equal spacing between items */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
 
 .nav-link:hover::after {
   width: 100%;

@@ -30,8 +30,7 @@ export default function Navbar() {
           {NAV_ITEMS.map((item) => (
             <button
               key={item.id}
-              className="nav-link"
-              type="button"
+              className="nav-link clean-link"
               onClick={() => handleNavClick(item.id)}
             >
               {item.label}
