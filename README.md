@@ -1,7 +1,7 @@
 # 🚀 Natej Ghodbane — AI & Data Science Portfolio
 
 Welcome to my personal portfolio website!  
-Built with **Next.js **, **TypeScript**, and a fully responsive custom UI.
+Built with **Next.js**, **TypeScript**, and a fully responsive custom UI.
 
 🌐 **Live Website:**  
 👉 https://portfolio-mu-one-qck0vvaw6p.vercel.app  
