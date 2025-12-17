@@ -62,7 +62,7 @@ The portfolio is deployed on **Vercel** and updates automatically on every push.
 ## 📦 Installation & Running Locally
 
 ```bash
-git clone <your_repo_url>
+git clone https://github.com/natej-ghodbane/Portfolio.git
 cd portfolio
 npm install
 npm run dev
