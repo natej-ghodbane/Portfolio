@@ -15,7 +15,7 @@ export default function Projects() {
             <p className="project-desc">
               End-to-end MLOps platform for customer churn prediction with
               automated training, MLflow experiment tracking, FastAPI inference,
-              Streamlit dashboard, and Dockerized CI/CD pipeline.
+              Streamlit dashboard, ELK Stack, and Dockerized CI/CD pipeline.
             </p>
 
             <div className="project-tech-row">
@@ -26,6 +26,7 @@ export default function Projects() {
               <span className="project-tech">Streamlit</span>
               <span className="project-tech">Docker</span>
               <span className="project-tech">Jenkins</span>
+              <span className="project-tech">ELK Stack</span>
             </div>
           </div>
 
