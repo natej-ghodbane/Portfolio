@@ -650,7 +650,29 @@ body {
 .project-desc {
   font-size: 0.82rem;
   color: var(--text-muted);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-features {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.project-features li {
+  padding-left: 1.2rem;
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+
+.project-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-soft);
+  font-weight: bold;
 }
 
 .project-tech-row {
