@@ -1,5 +1,7 @@
 "use client";
 
+import { Download } from "lucide-react";
+
 const NAV_ITEMS = [
   { id: "hero", label: "Home" },
   { id: "about", label: "About" },
@@ -13,6 +15,15 @@ export default function Navbar() {
     const el = document.getElementById(id);
     if (!el) return;
     el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/cv.pdf";
+    link.download = "Natej_Ghodbane_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -36,6 +47,14 @@ export default function Navbar() {
               {item.label}
             </button>
           ))}
+          <button
+            className="nav-cta-button"
+            onClick={handleDownloadCV}
+            title="Download CV as PDF"
+          >
+            <Download size={16} />
+            CV
+          </button>
         </nav>
       </div>
     </header>
