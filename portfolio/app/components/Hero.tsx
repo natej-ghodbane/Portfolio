@@ -47,27 +47,34 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-orb">
-        <div className="orb-core">
-          <div className="orb-grid" />
-          <div className="orb-inner-content">
-            <div className="orb-title">Model Studio</div>
-            <div className="orb-main">
-              <span>Data</span>
-              <span>Science</span>
-              <span className="hero-highlight">+ AI</span>
+      <div className="hero-profile-card">
+        <div className="profile-avatar">
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQGwRqImJW2fzA/profile-displayphoto-crop_800_800/B4DZtgAJQRJUAI-/0/1766842210252?e=1770249600&v=beta&t=JQefbl0tR7oeRDx1JyueBn-5GhGv4ZD7kCAZrNRwS-E" alt="Natej Ghodbane" className="avatar-image" />
+        </div>
+        
+        <div className="profile-info">
+          <h3 className="profile-name">Natej Ghodbane</h3>
+          <p className="profile-role">Data Science & AI Engineer</p>
+          
+          <div className="profile-stats">
+            <div className="stat-item">
+              <div className="stat-value">5+</div>
+              <div className="stat-label">Projects</div>
             </div>
-
-            <p className="orb-caption">
-              From raw data to production-ready models: EDA, feature engineering,
-              training, evaluation and deployment pipelines.
-            </p>
-
-            <div className="orb-tags">
-              <span className="orb-tag">Machine Learning</span>
-              <span className="orb-tag">Deep Learning</span>
-              <span className="orb-tag">MLOps</span>
+            <div className="stat-item">
+              <div className="stat-value">3+</div>
+              <div className="stat-label">Years</div>
             </div>
+            <div className="stat-item">
+              <div className="stat-value">100%</div>
+              <div className="stat-label">Dedicated</div>
+            </div>
+          </div>
+
+          <div className="profile-skills">
+            <span className="skill-badge">Machine Learning</span>
+            <span className="skill-badge">Deep Learning</span>
+            <span className="skill-badge">MLOps</span>
           </div>
         </div>
       </div>
