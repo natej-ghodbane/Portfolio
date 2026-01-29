@@ -1,13 +1,92 @@
 "use client";
 
-import { Mail, Github, Linkedin } from "lucide-react";
+import { useState, useRef } from "react";
+import { Mail, Github, Linkedin, Loader2, CheckCircle, XCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
+
+type FormStatus = "idle" | "sending" | "success" | "error";
 
 export default function Contact() {
-  const sendMessage = (e: React.FormEvent) => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<FormStatus>("idle");
+
+  const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert(
-      "Soon ... I'm working on setting up the contact form functionality!"
-    );
+    
+    if (!formRef.current) return;
+
+    setStatus("sending");
+
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      setStatus("error");
+      return;
+    }
+
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      setStatus("success");
+      formRef.current.reset();
+
+      // Reset status after 5 seconds
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (error) {
+      setStatus("error");
+
+      // Reset status after 5 seconds
+      setTimeout(() => setStatus("idle"), 5000);
+    }
+  };
+
+  const getButtonContent = () => {
+    switch (status) {
+      case "sending":
+        return (
+          <>
+            <Loader2 className="animate-spin" size={18} />
+            Sending...
+          </>
+        );
+      case "success":
+        return (
+          <>
+            <CheckCircle size={18} />
+            Message Sent!
+          </>
+        );
+      case "error":
+        return (
+          <>
+            <XCircle size={18} />
+            Failed to Send
+          </>
+        );
+      default:
+        return "Send message";
+    }
+  };
+
+  const getButtonClass = () => {
+    const baseClass = "btn-primary";
+    switch (status) {
+      case "sending":
+        return `${baseClass} btn-sending`;
+      case "success":
+        return `${baseClass} btn-success`;
+      case "error":
+        return `${baseClass} btn-error`;
+      default:
+        return baseClass;
+    }
   };
 
   return (
@@ -71,16 +150,18 @@ export default function Contact() {
         </div>
 
         {/* RIGHT SECTION — CONTACT FORM */}
-        <form className="card contact-form" onSubmit={sendMessage}>
+        <form ref={formRef} className="card contact-form" onSubmit={sendMessage}>
           <div>
             <label className="contact-label" htmlFor="name">
               Name
             </label>
             <input
               id="name"
+              name="from_name"
               className="input"
               placeholder="Your name"
               required
+              disabled={status === "sending"}
             />
           </div>
 
@@ -90,10 +171,12 @@ export default function Contact() {
             </label>
             <input
               id="email"
+              name="from_email"
               type="email"
               className="input"
               placeholder="you@example.com"
               required
+              disabled={status === "sending"}
             />
           </div>
 
@@ -103,14 +186,30 @@ export default function Contact() {
             </label>
             <textarea
               id="message"
+              name="message"
               className="textarea"
               placeholder="Tell me about your idea, team or opportunity…"
               required
+              disabled={status === "sending"}
             />
           </div>
 
-          <button type="submit" className="btn-primary">
-            Send message
+          {status === "error" && (
+            <p className="error-message">
+              Something went wrong. Please try again.
+            </p>
+          )}
+
+          {status === "success" && (
+            <p className="success-message">Thank you! I'll get back to you soon.</p>
+          )}
+
+          <button 
+            type="submit" 
+            className={getButtonClass()}
+            disabled={status === "sending"}
+          >
+            {getButtonContent()}
           </button>
         </form>
       </div>
@@ -138,6 +237,68 @@ export default function Contact() {
         .link:hover .icon {
           color: #00eaff;
           transform: scale(1.1);
+        }
+
+        .btn-primary {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          transition: all 0.3s ease;
+        }
+
+        .btn-sending {
+          opacity: 0.7;
+          cursor: not-allowed;
+        }
+
+        .btn-success {
+          background: linear-gradient(135deg, #10b981, #059669) !important;
+          border-color: #10b981 !important;
+        }
+
+        .btn-error {
+          background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+          border-color: #ef4444 !important;
+        }
+
+        .error-message {
+          color: #ef4444;
+          font-size: 0.875rem;
+          margin: 0;
+          padding: 0.5rem;
+          background: rgba(239, 68, 68, 0.1);
+          border-radius: 6px;
+          border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .success-message {
+          color: #10b981;
+          font-size: 0.875rem;
+          margin: 0;
+          padding: 0.5rem;
+          background: rgba(16, 185, 129, 0.1);
+          border-radius: 6px;
+          border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .input:disabled,
+        .textarea:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-spin {
+          animation: spin 1s linear infinite;
         }
       `}</style>
     </section>
