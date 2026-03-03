@@ -49,7 +49,7 @@ export default function Hero() {
 
       <div className="hero-profile-card">
         <div className="profile-avatar">
-          <img src="https://media.licdn.com/dms/image/v2/D4D03AQGwRqImJW2fzA/profile-displayphoto-crop_800_800/B4DZtgAJQRJUAI-/0/1766842210252?e=1770249600&v=beta&t=JQefbl0tR7oeRDx1JyueBn-5GhGv4ZD7kCAZrNRwS-E" alt="Natej Ghodbane" className="avatar-image" />
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQGwRqImJW2fzA/profile-displayphoto-scale_400_400/B4DZtgAJQRJUAg-/0/1766842210336?e=1773878400&v=beta&t=_A0IRb6c3Ig5hq3O-qPGy-km8jRIjEbqSJmlApAI4Dg" alt="Natej Ghodbane" className="avatar-image" />
         </div>
         
         <div className="profile-info">
