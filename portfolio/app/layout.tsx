@@ -2,9 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Data Science & AI Engineer",
+  title: "Natej Ghodbane | Data Science & AI Engineer",
   description:
-    "Portfolio of a creative Data Science & AI Engineer showcasing ML, MLOps and full-stack projects.",
+    "Portfolio of a Data Science & AI Engineer showcasing ML, MLOps and full-stack projects.",
 };
 
 export default function RootLayout({
