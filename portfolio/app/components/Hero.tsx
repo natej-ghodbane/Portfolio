@@ -49,7 +49,7 @@ export default function Hero() {
 
       <div className="hero-profile-card">
         <div className="profile-avatar">
-          <img src="https://media.licdn.com/dms/image/v2/D4D03AQGwRqImJW2fzA/profile-displayphoto-scale_400_400/B4DZtgAJQRJUAg-/0/1766842210336?e=1773878400&v=beta&t=_A0IRb6c3Ig5hq3O-qPGy-km8jRIjEbqSJmlApAI4Dg" alt="Natej Ghodbane" className="avatar-image" />
+          <img src="/profile.jpg" alt="Natej Ghodbane" className="avatar-image" />
         </div>
         
         <div className="profile-info">
@@ -58,11 +58,11 @@ export default function Hero() {
           
           <div className="profile-stats">
             <div className="stat-item">
-              <div className="stat-value">5+</div>
+              <div className="stat-value">4+</div>
               <div className="stat-label">Projects</div>
             </div>
             <div className="stat-item">
-              <div className="stat-value">3+</div>
+              <div className="stat-value">2+</div>
               <div className="stat-label">Years</div>
             </div>
             <div className="stat-item">
