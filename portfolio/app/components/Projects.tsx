@@ -1,22 +1,24 @@
-export default function Projects() {
+import type { Dictionary } from "@/lib/get-dictionary";
+
+type ProjectsProps = {
+  dictionary: Dictionary["projects"];
+};
+
+export default function Projects({ dictionary }: ProjectsProps) {
   return (
     <section id="projects" className="section">
       <div className="section-header">
-        <div className="section-kicker">Selected work</div>
-        <h2 className="section-title">Projects</h2>
+        <div className="section-kicker">{dictionary.kicker}</div>
+        <h2 className="section-title">{dictionary.title}</h2>
       </div>
 
       <div className="projects-grid">
         {/* Project 1 – MLOps Churn Prediction */}
         <article className="project-card">
           <div>
-            <div className="project-pill">MLOps • AI</div>
-            <h3 className="project-title">Churn Prediction MLOps Platform</h3>
-            <p className="project-desc">
-              End-to-end MLOps platform for customer churn prediction with
-              automated training, MLflow experiment tracking, FastAPI inference,
-              Streamlit dashboard, ELK Stack, and Dockerized CI/CD pipeline.
-            </p>
+            <div className="project-pill">{dictionary.cards.mlops.pill}</div>
+            <h3 className="project-title">{dictionary.cards.mlops.title}</h3>
+            <p className="project-desc">{dictionary.cards.mlops.description}</p>
 
             <div className="project-tech-row">
               <span className="project-tech">Python</span>
@@ -34,9 +36,10 @@ export default function Projects() {
             <a
               href="https://github.com/natej-ghodbane/MLOps"
               target="_blank"
+              rel="noopener noreferrer"
               className="project-link"
             >
-              GitHub
+              {dictionary.cards.mlops.linkLabel}
             </a>
           </div>
         </article>
@@ -44,12 +47,9 @@ export default function Projects() {
         {/* Project 2 – Agri-Hope */}
         <article className="project-card">
           <div>
-            <div className="project-pill">AI + Web</div>
-            <h3 className="project-title">Agri-Hope Marketplace</h3>
-            <p className="project-desc">
-              Full-stack marketplace for small farmers with an integrated AI
-              assistant.
-            </p>
+            <div className="project-pill">{dictionary.cards.agriHope.pill}</div>
+            <h3 className="project-title">{dictionary.cards.agriHope.title}</h3>
+            <p className="project-desc">{dictionary.cards.agriHope.description}</p>
 
             <div className="project-tech-row">
               <span className="project-tech">Next.js</span>
@@ -62,9 +62,10 @@ export default function Projects() {
             <a
               href="https://wie-act-esprit.vercel.app"
               target="_blank"
+              rel="noopener noreferrer"
               className="project-link"
             >
-              Live demo
+              {dictionary.cards.agriHope.linkLabel}
             </a>
           </div>
         </article>
@@ -72,17 +73,14 @@ export default function Projects() {
         {/* Project 3 – Breast Cancer Prediction Platform */}
         <article className="project-card">
           <div>
-            <div className="project-pill">ML • XAI</div>
-            <h3 className="project-title">Breast Cancer Prediction Platform</h3>
-            <p className="project-desc">
-              End-to-end ML platform for breast cancer prediction developed using CRISP-DM methodology with model interpretability via SHAP, FastAPI backend, and interactive Next.js frontend.
-            </p>
+            <div className="project-pill">{dictionary.cards.breastCancer.pill}</div>
+            <h3 className="project-title">{dictionary.cards.breastCancer.title}</h3>
+            <p className="project-desc">{dictionary.cards.breastCancer.description}</p>
 
             <ul className="project-features">
-              <li>ML Models: Logistic Regression, SVM, Random Forest, MLP, XGBoost</li>
-              <li>Explainable AI (XAI) using SHAP for prediction interpretation</li>
-              <li>FastAPI backend with inference API</li>
-              <li>Interactive Next.js web interface</li>
+              {dictionary.cards.breastCancer.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
             </ul>
 
             <div className="project-tech-row">
@@ -99,9 +97,10 @@ export default function Projects() {
             <a
               href="https://vimeo.com/1156500095?share=copy&fl=sv&fe=ci"
               target="_blank"
+              rel="noopener noreferrer"
               className="project-link"
             >
-              Demo Video
+              {dictionary.cards.breastCancer.linkLabel}
             </a>
           </div>
         </article>

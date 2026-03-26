@@ -1,48 +1,49 @@
-export default function Hero() {
+import type { Dictionary } from "@/lib/get-dictionary";
+
+type HeroProps = {
+  dictionary: Dictionary["hero"];
+};
+
+export default function Hero({ dictionary }: HeroProps) {
   return (
     <section id="hero" className="hero section">
       <div>
         <div className="hero-badge-row">
           <div className="hero-badge">
             <span className="hero-badge-dot" />
-            <span>AI & Data</span>
+            <span>{dictionary.badge}</span>
           </div>
         </div>
 
         <h1 className="hero-title">
-          Designing <span className="hero-highlight">intelligent systems</span>{" "}
-          that learn from data & create impact.
+          {dictionary.titleStart}{" "}
+          <span className="hero-highlight">{dictionary.titleHighlight}</span>{" "}
+          {dictionary.titleEnd}
         </h1>
 
-        <p className="hero-subtitle">
-          I'm a Data Science & AI Engineer focused on turning real-world
-          problems into deployable ML solutions. Explore my portfolio to see
-          projects leveraging machine learning, deep learning, and MLOps.
-        </p>
+        <p className="hero-subtitle">{dictionary.subtitle}</p>
 
         <div className="hero-cta-row">
           <a href="#projects" className="btn-primary">
-            View featured projects
+            {dictionary.viewProjects}
           </a>
           <a href="#contact" className="btn-ghost">
-            Let's collaborate
+            {dictionary.collaborate}
           </a>
         </div>
 
         <div className="hero-meta-row">
           <div className="hero-meta-item">
-            <span className="hero-meta-label">Focus</span>
-            <span className="hero-meta-value">ML, Deep Learning, MLOps</span>
+            <span className="hero-meta-label">{dictionary.focusLabel}</span>
+            <span className="hero-meta-value">{dictionary.focusValue}</span>
           </div>
           <div className="hero-meta-item">
-            <span className="hero-meta-label">Stack</span>
-            <span className="hero-meta-value">
-              Python • TensorFlow • PyTorch • Next.js
-            </span>
+            <span className="hero-meta-label">{dictionary.stackLabel}</span>
+            <span className="hero-meta-value">{dictionary.stackValue}</span>
           </div>
           <div className="hero-meta-item">
-            <span className="hero-meta-label">Location</span>
-            <span className="hero-meta-value">Rades • Tunisia</span>
+            <span className="hero-meta-label">{dictionary.locationLabel}</span>
+            <span className="hero-meta-value">{dictionary.locationValue}</span>
           </div>
         </div>
       </div>
@@ -54,20 +55,20 @@ export default function Hero() {
         
         <div className="profile-info">
           <h3 className="profile-name">Natej Ghodbane</h3>
-          <p className="profile-role">Data Science & AI Engineer</p>
+          <p className="profile-role">{dictionary.profileRole}</p>
           
           <div className="profile-stats">
             <div className="stat-item">
               <div className="stat-value">4+</div>
-              <div className="stat-label">Projects</div>
+              <div className="stat-label">{dictionary.stats.projects}</div>
             </div>
             <div className="stat-item">
               <div className="stat-value">2+</div>
-              <div className="stat-label">Years</div>
+              <div className="stat-label">{dictionary.stats.years}</div>
             </div>
             <div className="stat-item">
               <div className="stat-value">100%</div>
-              <div className="stat-label">Dedicated</div>
+              <div className="stat-label">{dictionary.stats.dedicated}</div>
             </div>
           </div>
 

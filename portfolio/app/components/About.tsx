@@ -1,26 +1,29 @@
-export default function About() {
+import type { Dictionary } from "@/lib/get-dictionary";
+
+type AboutProps = {
+  dictionary: Dictionary["about"];
+};
+
+export default function About({ dictionary }: AboutProps) {
   return (
     <section id="about" className="section">
       <div className="section-header">
-        <div className="section-kicker">About me</div>
-        <h2 className="section-title">Data-driven, user-centric, curious.</h2>
+        <div className="section-kicker">{dictionary.kicker}</div>
+        <h2 className="section-title">{dictionary.title}</h2>
       </div>
 
       <div className="grid-two">
         <article className="card">
-          <h3 className="card-title">Who am I?</h3>
-          <p className="card-subtitle">Data Science & AI Engineer • ESPRIT</p>
+          <h3 className="card-title">{dictionary.whoAmI}</h3>
+          <p className="card-subtitle">{dictionary.whoAmISubtitle}</p>
 
-          <p className="text-sm">
-            I build intelligent products that connect math, code and people. I
-            work in ML, NLP, recommendation systems and AI-powered web apps.
-          </p>
+          <p className="text-sm">{dictionary.whoAmIDescription}</p>
 
         </article>
 
         <article className="card">
-          <h3 className="card-title">Core Skills</h3>
-          <p className="card-subtitle">What I use to craft ideas.</p>
+          <h3 className="card-title">{dictionary.coreSkills}</h3>
+          <p className="card-subtitle">{dictionary.coreSkillsSubtitle}</p>
 
           <div className="chips">
             <span className="chip">Python</span>

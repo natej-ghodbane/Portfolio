@@ -1,0 +1,139 @@
+{
+  "seo": {
+    "title": "Natej Ghodbane | Data Science & AI Engineer",
+    "description": "Portfolio of a Data Science & AI Engineer showcasing ML, MLOps, and full-stack projects."
+  },
+  "navbar": {
+    "brandRole": "Data Science & AI Engineer",
+    "downloadCv": "CV",
+    "downloadCvTitle": "Download CV as PDF",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "experience": "Experience",
+      "contact": "Contact"
+    },
+    "languageSwitcher": {
+      "label": "Language",
+      "english": "English",
+      "french": "Français"
+    }
+  },
+  "hero": {
+    "badge": "AI & Data",
+    "titleStart": "Designing",
+    "titleHighlight": "intelligent systems",
+    "titleEnd": "that learn from data and create impact.",
+    "subtitle": "I'm a Data Science & AI Engineer focused on turning real-world problems into deployable ML solutions. Explore my portfolio to see projects leveraging machine learning, deep learning, and MLOps.",
+    "viewProjects": "View featured projects",
+    "collaborate": "Let's collaborate",
+    "focusLabel": "Focus",
+    "focusValue": "ML, Deep Learning, MLOps",
+    "stackLabel": "Stack",
+    "stackValue": "Python • TensorFlow • PyTorch • Next.js",
+    "locationLabel": "Location",
+    "locationValue": "Rades • Tunisia",
+    "profileRole": "Data Science & AI Engineer",
+    "stats": {
+      "projects": "Projects",
+      "years": "Years",
+      "dedicated": "Dedicated"
+    }
+  },
+  "about": {
+    "kicker": "About me",
+    "title": "Data-driven, user-centric, curious.",
+    "whoAmI": "Who am I?",
+    "whoAmISubtitle": "Data Science & AI Engineer • ESPRIT",
+    "whoAmIDescription": "I build intelligent products that connect math, code, and people. I work in ML, NLP, recommendation systems, and AI-powered web apps.",
+    "coreSkills": "Core Skills",
+    "coreSkillsSubtitle": "What I use to craft ideas."
+  },
+  "projects": {
+    "kicker": "Selected work",
+    "title": "Projects",
+    "cards": {
+      "mlops": {
+        "pill": "MLOps • AI",
+        "title": "Churn Prediction MLOps Platform",
+        "description": "End-to-end MLOps platform for customer churn prediction with automated training, MLflow experiment tracking, FastAPI inference, Streamlit dashboard, ELK Stack, and Dockerized CI/CD pipeline.",
+        "linkLabel": "GitHub"
+      },
+      "agriHope": {
+        "pill": "AI + Web",
+        "title": "Agri-Hope Marketplace",
+        "description": "Full-stack marketplace for small farmers with an integrated AI assistant.",
+        "linkLabel": "Live demo"
+      },
+      "breastCancer": {
+        "pill": "ML • XAI",
+        "title": "Breast Cancer Prediction Platform",
+        "description": "End-to-end ML platform for breast cancer prediction developed using CRISP-DM methodology with model interpretability via SHAP, FastAPI backend, and interactive Next.js frontend.",
+        "features": [
+          "ML Models: Logistic Regression, SVM, Random Forest, MLP, XGBoost",
+          "Explainable AI (XAI) using SHAP for prediction interpretation",
+          "FastAPI backend with inference API",
+          "Interactive Next.js web interface"
+        ],
+        "linkLabel": "Demo video"
+      }
+    }
+  },
+  "experience": {
+    "kicker": "Experience",
+    "title": "Learning by building, mentoring and shipping.",
+    "timeline": "Timeline",
+    "timelineSubtitle": "Highlights from my journey.",
+    "lookingFor": "What I'm looking for",
+    "lookingForSubtitle": "Internships • collaborations • research.",
+    "lookingForIntro": "I'm interested in internships and collaborations where I can:",
+    "lookingForList": [
+      "Design and train ML models on real-world datasets.",
+      "Work with data platforms, pipelines, and MLOps tools.",
+      "Build AI-powered features inside modern web apps.",
+      "Contribute to open-source or research-oriented work."
+    ],
+    "lookingForOutro": "If your team works at the intersection of AI, product, and impact, I'd love to talk.",
+    "items": [
+      {
+        "title": "Data Science & AI Engineering Student",
+        "meta": "ESPRIT • Current",
+        "description": "Coursework and projects in ML, Big Data, cloud, full-stack development, and software architecture."
+      },
+      {
+        "title": "IEEE Student Branch",
+        "meta": "Workshops • Events • Projects",
+        "description": "Attended workshops on Data Science, AI, and Web Development, and worked on many projects and events as a team member."
+      },
+      {
+        "title": "ML & MLOps Side Projects",
+        "meta": "Personal growth • Experimentation • Deployment",
+        "description": "Built pipelines with proper experimentation, evaluation, and deployment: versioning, metrics, and model reproducibility."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Let's build thoughtful AI together.",
+    "responseTime": "I usually reply in 24-48 hours.",
+    "responseTimeMore": "Feel free to share your idea, team, or opportunity.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your idea, team, or opportunity...",
+      "send": "Send message",
+      "sending": "Sending...",
+      "sent": "Message sent!",
+      "failed": "Failed to send",
+      "errorMessage": "Something went wrong. Please try again.",
+      "successMessage": "Thank you! I'll get back to you soon."
+    }
+  },
+  "footer": {
+    "tagline": "Designed as a Data Science & AI portfolio."
+  }
+}

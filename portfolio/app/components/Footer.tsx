@@ -1,8 +1,14 @@
-export default function Footer() {
+import type { Dictionary } from "@/lib/get-dictionary";
+
+type FooterProps = {
+  dictionary: Dictionary["footer"];
+};
+
+export default function Footer({ dictionary }: FooterProps) {
   return (
     <footer className="footer">
       <span>© {new Date().getFullYear()} Natej Ghodbane</span>
-      <span>Designed as a Data Science & AI portfolio.</span>
+      <span>{dictionary.tagline}</span>
     </footer>
   );
 }

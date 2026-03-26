@@ -1,81 +1,49 @@
-export default function Experience() {
+import type { Dictionary } from "@/lib/get-dictionary";
+
+type ExperienceProps = {
+  dictionary: Dictionary["experience"];
+};
+
+export default function Experience({ dictionary }: ExperienceProps) {
   return (
     <section id="experience" className="section">
       <div className="section-header">
-        <div className="section-kicker">Experience</div>
-        <h2 className="section-title">
-          Learning by building, mentoring and shipping.
-        </h2>
+        <div className="section-kicker">{dictionary.kicker}</div>
+        <h2 className="section-title">{dictionary.title}</h2>
       </div>
 
       <div className="grid-two">
         <article className="card">
-          <h3 className="card-title">Timeline</h3>
-          <p className="card-subtitle">Highlights from my journey.</p>
+          <h3 className="card-title">{dictionary.timeline}</h3>
+          <p className="card-subtitle">{dictionary.timelineSubtitle}</p>
 
           <div className="timeline">
-            {/* Item 1 */}
-            <div className="timeline-item">
-              <span className="timeline-dot" />
-              <div className="timeline-title">
-                Data Science & AI Engineering Student
+            {dictionary.items.map((item) => (
+              <div className="timeline-item" key={item.title}>
+                <span className="timeline-dot" />
+                <div className="timeline-title">{item.title}</div>
+                <div className="timeline-meta">{item.meta}</div>
+                <p className="timeline-desc">{item.description}</p>
               </div>
-              <div className="timeline-meta">ESPRIT • Current</div>
-              <p className="timeline-desc">
-                Coursework & projects in ML, Big Data, cloud, full-stack
-                development and software architecture.
-              </p>
-            </div>
-
-            {/* Item 2 */}
-            <div className="timeline-item">
-              <span className="timeline-dot" />
-              <div className="timeline-title">
-                IEEE Student Branch
-              </div>
-              <div className="timeline-meta">
-                 Workshops • Events • Projects
-              </div>
-                <p className="timeline-desc">
-                attended Workshops on Data Science, AI, and Web Development.
-                worked on many projects and events as a team member.
-              </p>
-            </div>
-
-            {/* Item 3 */}
-            <div className="timeline-item">
-              <span className="timeline-dot" />
-              <div className="timeline-title">ML & MLOps Side Projects</div>
-              <div className="timeline-meta">
-                Personal growth • Experimentation • Deployment
-              </div>
-              <p className="timeline-desc">
-                Built pipelines with proper experimentation, evaluation and
-                deployment: versioning, metrics and model reproducibility.
-              </p>
-            </div>
+            ))}
           </div>
         </article>
 
         {/* RIGHT SIDE — Goals */}
         <article className="card">
-          <h3 className="card-title">What I'm looking for</h3>
-          <p className="card-subtitle">Internships • collaborations • research.</p>
+          <h3 className="card-title">{dictionary.lookingFor}</h3>
+          <p className="card-subtitle">{dictionary.lookingForSubtitle}</p>
 
-          <p className="text-sm">
-            I'm interested in internships and collaborations where I can:
-          </p>
+          <p className="text-sm">{dictionary.lookingForIntro}</p>
 
           <ul className="text-sm" style={{ marginTop: "0.6rem" }}>
-            <li>Design and train ML models on real-world datasets.</li>
-            <li>Work with data platforms, pipelines and MLOps tools.</li>
-            <li>Build AI-powered features inside modern web apps.</li>
-            <li>Contribute to open-source or research-oriented work.</li>
+            {dictionary.lookingForList.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
 
           <p className="text-sm" style={{ marginTop: "0.8rem" }}>
-            If your team works at the intersection of <b>AI, product and impact</b>,
-            I'd love to talk.
+            {dictionary.lookingForOutro}
           </p>
         </article>
       </div>

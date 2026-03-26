@@ -2,15 +2,24 @@
 
 import { Download } from "lucide-react";
 
-const NAV_ITEMS = [
-  { id: "hero", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "projects", label: "Projects" },
-  { id: "experience", label: "Experience" },
-  { id: "contact", label: "Contact" },
-];
+import LanguageSwitcher from "@/app/components/LanguageSwitcher";
+import type { Dictionary } from "@/lib/get-dictionary";
+import type { Locale } from "@/lib/i18n-config";
 
-export default function Navbar() {
+type NavbarProps = {
+  locale: Locale;
+  dictionary: Dictionary["navbar"];
+};
+
+export default function Navbar({ locale, dictionary }: NavbarProps) {
+  const navItems = [
+    { id: "hero", label: dictionary.nav.home },
+    { id: "about", label: dictionary.nav.about },
+    { id: "projects", label: dictionary.nav.projects },
+    { id: "experience", label: dictionary.nav.experience },
+    { id: "contact", label: dictionary.nav.contact },
+  ];
+
   const handleNavClick = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
@@ -18,9 +27,10 @@ export default function Navbar() {
   };
 
   const handleDownloadCV = () => {
+    const cvFileName = locale === "fr" ? "cv_francais.pdf" : "cv_anglais.pdf";
     const link = document.createElement("a");
-    link.href = "/cv.pdf";
-    link.download = "Natej_Ghodbane_CV.pdf";
+    link.href = `/${cvFileName}`;
+    link.download = cvFileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -33,12 +43,12 @@ export default function Navbar() {
           <div className="nav-logo">AI</div>
           <div className="nav-title">
             <span className="nav-title-main">Natej Ghodbane</span>
-            <span className="nav-title-sub">Data Science & AI Engineer</span>
+            <span className="nav-title-sub">{dictionary.brandRole}</span>
           </div>
         </div>
 
         <nav className="nav-links">
-          {NAV_ITEMS.map((item) => (
+          {navItems.map((item) => (
             <button
               key={item.id}
               className="nav-link clean-link"
@@ -50,11 +60,17 @@ export default function Navbar() {
           <button
             className="nav-cta-button"
             onClick={handleDownloadCV}
-            title="Download CV as PDF"
+            title={dictionary.downloadCvTitle}
           >
             <Download size={16} />
-            CV
+            {dictionary.downloadCv}
           </button>
+          <LanguageSwitcher
+            currentLocale={locale}
+            label={dictionary.languageSwitcher.label}
+            englishLabel={dictionary.languageSwitcher.english}
+            frenchLabel={dictionary.languageSwitcher.french}
+          />
         </nav>
       </div>
     </header>

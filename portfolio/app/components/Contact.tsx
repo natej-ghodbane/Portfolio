@@ -4,13 +4,19 @@ import { useState, useRef } from "react";
 import { Mail, Github, Linkedin, Loader2, CheckCircle, XCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
+import type { Dictionary } from "@/lib/get-dictionary";
+
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
-export default function Contact() {
+type ContactProps = {
+  dictionary: Dictionary["contact"];
+};
+
+export default function Contact({ dictionary }: ContactProps) {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<FormStatus>("idle");
 
@@ -53,25 +59,25 @@ export default function Contact() {
         return (
           <>
             <Loader2 className="animate-spin" size={18} />
-            Sending...
+            {dictionary.form.sending}
           </>
         );
       case "success":
         return (
           <>
             <CheckCircle size={18} />
-            Message Sent!
+            {dictionary.form.sent}
           </>
         );
       case "error":
         return (
           <>
             <XCircle size={18} />
-            Failed to Send
+            {dictionary.form.failed}
           </>
         );
       default:
-        return "Send message";
+        return dictionary.form.send;
     }
   };
 
@@ -92,8 +98,8 @@ export default function Contact() {
   return (
     <section id="contact" className="section">
       <div className="section-header">
-        <div className="section-kicker">Contact</div>
-        <h2 className="section-title">Let's build thoughtful AI together.</h2>
+        <div className="section-kicker">{dictionary.kicker}</div>
+        <h2 className="section-title">{dictionary.title}</h2>
       </div>
 
       <div className="contact-grid">
@@ -143,9 +149,9 @@ export default function Contact() {
           </p>
 
           <p className="contact-item" style={{ marginTop: "1.1rem" }}>
-            I usually reply in 24-48 hours.
+            {dictionary.responseTime}
             <br />
-            Feel free to share your idea, team or opportunity.
+            {dictionary.responseTimeMore}
           </p>
         </div>
 
@@ -153,13 +159,13 @@ export default function Contact() {
         <form ref={formRef} className="card contact-form" onSubmit={sendMessage}>
           <div>
             <label className="contact-label" htmlFor="name">
-              Name
+              {dictionary.form.name}
             </label>
             <input
               id="name"
               name="from_name"
               className="input"
-              placeholder="Your name"
+              placeholder={dictionary.form.namePlaceholder}
               required
               disabled={status === "sending"}
             />
@@ -167,14 +173,14 @@ export default function Contact() {
 
           <div>
             <label className="contact-label" htmlFor="email">
-              Email
+              {dictionary.form.email}
             </label>
             <input
               id="email"
               name="from_email"
               type="email"
               className="input"
-              placeholder="you@example.com"
+              placeholder={dictionary.form.emailPlaceholder}
               required
               disabled={status === "sending"}
             />
@@ -182,26 +188,24 @@ export default function Contact() {
 
           <div>
             <label className="contact-label" htmlFor="message">
-              Message
+              {dictionary.form.message}
             </label>
             <textarea
               id="message"
               name="message"
               className="textarea"
-              placeholder="Tell me about your idea, team or opportunity…"
+              placeholder={dictionary.form.messagePlaceholder}
               required
               disabled={status === "sending"}
             />
           </div>
 
           {status === "error" && (
-            <p className="error-message">
-              Something went wrong. Please try again.
-            </p>
+            <p className="error-message">{dictionary.form.errorMessage}</p>
           )}
 
           {status === "success" && (
-            <p className="success-message">Thank you! I'll get back to you soon.</p>
+            <p className="success-message">{dictionary.form.successMessage}</p>
           )}
 
           <button 

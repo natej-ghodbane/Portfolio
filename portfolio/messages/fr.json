@@ -1,0 +1,139 @@
+{
+  "seo": {
+    "title": "Natej Ghodbane | Ingenieur Data Science & IA",
+    "description": "Portfolio d'un ingenieur Data Science & IA presentant des projets ML, MLOps et full-stack."
+  },
+  "navbar": {
+    "brandRole": "Ingenieur Data Science & IA",
+    "downloadCv": "CV",
+    "downloadCvTitle": "Telecharger le CV en PDF",
+    "nav": {
+      "home": "Accueil",
+      "about": "A propos",
+      "projects": "Projets",
+      "experience": "Experience",
+      "contact": "Contact"
+    },
+    "languageSwitcher": {
+      "label": "Langue",
+      "english": "English",
+      "french": "Français"
+    }
+  },
+  "hero": {
+    "badge": "IA & Data",
+    "titleStart": "Concevoir des",
+    "titleHighlight": "systemes intelligents",
+    "titleEnd": "qui apprennent des donnees et creent de l'impact.",
+    "subtitle": "Je suis ingenieur Data Science & IA, specialise dans la transformation de problemes reels en solutions ML deployables. Explorez mon portfolio pour decouvrir des projets en machine learning, deep learning et MLOps.",
+    "viewProjects": "Voir les projets phares",
+    "collaborate": "Collaborons",
+    "focusLabel": "Focus",
+    "focusValue": "ML, Deep Learning, MLOps",
+    "stackLabel": "Stack",
+    "stackValue": "Python • TensorFlow • PyTorch • Next.js",
+    "locationLabel": "Localisation",
+    "locationValue": "Rades • Tunisie",
+    "profileRole": "Ingenieur Data Science & IA",
+    "stats": {
+      "projects": "Projets",
+      "years": "Annees",
+      "dedicated": "Engage"
+    }
+  },
+  "about": {
+    "kicker": "A propos",
+    "title": "Guide par la data, centre utilisateur, curieux.",
+    "whoAmI": "Qui suis-je ?",
+    "whoAmISubtitle": "Ingenieur Data Science & IA • ESPRIT",
+    "whoAmIDescription": "Je construis des produits intelligents qui relient mathematiques, code et humains. Je travaille sur le ML, le NLP, les systemes de recommandation et les applications web boostees par l'IA.",
+    "coreSkills": "Competences cle",
+    "coreSkillsSubtitle": "Ce que j'utilise pour transformer des idees."
+  },
+  "projects": {
+    "kicker": "Selection",
+    "title": "Projets",
+    "cards": {
+      "mlops": {
+        "pill": "MLOps • IA",
+        "title": "Plateforme MLOps de prediction du churn",
+        "description": "Plateforme MLOps de bout en bout pour la prediction de churn client avec entrainement automatise, suivi d'experiences MLflow, inference FastAPI, dashboard Streamlit, stack ELK et pipeline CI/CD dockerise.",
+        "linkLabel": "GitHub"
+      },
+      "agriHope": {
+        "pill": "IA + Web",
+        "title": "Marketplace Agri-Hope",
+        "description": "Marketplace full-stack pour petits agriculteurs avec assistant IA integre.",
+        "linkLabel": "Demo live"
+      },
+      "breastCancer": {
+        "pill": "ML • XAI",
+        "title": "Plateforme de prediction du cancer du sein",
+        "description": "Plateforme ML complete pour la prediction du cancer du sein, developpee avec la methodologie CRISP-DM, interpretabilite via SHAP, backend FastAPI et frontend Next.js interactif.",
+        "features": [
+          "Modeles ML : Regression logistique, SVM, Random Forest, MLP, XGBoost",
+          "IA explicable (XAI) avec SHAP pour interpreter les predictions",
+          "Backend FastAPI avec API d'inference",
+          "Interface web Next.js interactive"
+        ],
+        "linkLabel": "Video demo"
+      }
+    }
+  },
+  "experience": {
+    "kicker": "Experience",
+    "title": "Apprendre en construisant, mentorant et livrant.",
+    "timeline": "Parcours",
+    "timelineSubtitle": "Moments cles de mon evolution.",
+    "lookingFor": "Ce que je recherche",
+    "lookingForSubtitle": "Stages • collaborations • recherche.",
+    "lookingForIntro": "Je recherche des stages et collaborations ou je peux :",
+    "lookingForList": [
+      "Concevoir et entrainer des modeles ML sur des donnees reelles.",
+      "Travailler avec des plateformes data, pipelines et outils MLOps.",
+      "Creer des fonctionnalites IA dans des applications web modernes.",
+      "Contribuer a l'open source ou a des travaux orientes recherche."
+    ],
+    "lookingForOutro": "Si votre equipe travaille a l'intersection entre IA, produit et impact, j'aimerais echanger.",
+    "items": [
+      {
+        "title": "Etudiant en Data Science & IA",
+        "meta": "ESPRIT • Actuel",
+        "description": "Cours et projets en ML, Big Data, cloud, developpement full-stack et architecture logicielle."
+      },
+      {
+        "title": "IEEE Student Branch",
+        "meta": "Workshops • Evenements • Projets",
+        "description": "Participation a des workshops Data Science, IA et developpement web, avec contribution a plusieurs projets et evenements en equipe."
+      },
+      {
+        "title": "Projets personnels ML & MLOps",
+        "meta": "Croissance personnelle • Experimentation • Deploiement",
+        "description": "Construction de pipelines avec experimentation, evaluation et deploiement : versioning, metriques et reproductibilite des modeles."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Construisons ensemble une IA utile.",
+    "responseTime": "Je reponds generalement sous 24 a 48 heures.",
+    "responseTimeMore": "N'hesitez pas a partager votre idee, equipe ou opportunite.",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "vous@exemple.com",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-moi de votre idee, equipe ou opportunite...",
+      "send": "Envoyer le message",
+      "sending": "Envoi...",
+      "sent": "Message envoye !",
+      "failed": "Echec de l'envoi",
+      "errorMessage": "Une erreur est survenue. Veuillez reessayer.",
+      "successMessage": "Merci ! Je vous recontacte tres bientot."
+    }
+  },
+  "footer": {
+    "tagline": "Concu comme portfolio Data Science & IA."
+  }
+}
