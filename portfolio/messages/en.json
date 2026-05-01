@@ -77,6 +77,18 @@
           "Interactive Next.js web interface"
         ],
         "linkLabel": "Demo video"
+      },
+        "restaurantRating": {
+          "pill": "BI Dashboard • ML",
+          "title": "Restaurant Rating Analysis Dashboard",
+          "description": "Interactive Power BI dashboard analyzing restaurant satisfaction, customer profiles, cuisine preferences, pricing, parking availability, and transportation methods. The project also includes Python-based machine learning visuals to study the factors influencing overall ratings and cuisine prediction.",
+          "features": [
+            "Built interactive dashboards for director, quality manager, marketing, client, and machine learning views.",
+            "Created DAX measures for satisfaction, dissatisfaction, positive ratings, food satisfaction, service satisfaction, and offer-preference adequacy.",
+            "Analyzed customer behavior by age, budget, marital status, drink level, smoker status, preferred cuisine, and transportation method.",
+            "Integrated Python visuals using pandas, scikit-learn, matplotlib, and seaborn for feature importance and rating prediction."
+        ],
+        "linkLabel": "Demo video"
       }
     }
   },
@@ -136,4 +148,5 @@
   "footer": {
     "tagline": "Designed as a Data Science & AI portfolio."
   }
+  
 }

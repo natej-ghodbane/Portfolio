@@ -44,28 +44,42 @@ export default function Projects({ dictionary }: ProjectsProps) {
           </div>
         </article>
 
-        {/* Project 2 – Agri-Hope */}
+        {/* Project 2 – Restaurant Rating Dashboard */}
         <article className="project-card">
           <div>
-            <div className="project-pill">{dictionary.cards.agriHope.pill}</div>
-            <h3 className="project-title">{dictionary.cards.agriHope.title}</h3>
-            <p className="project-desc">{dictionary.cards.agriHope.description}</p>
+            <div className="project-pill">{dictionary.cards.restaurantRating.pill}</div>
+            <h3 className="project-title">
+              {dictionary.cards.restaurantRating.title}
+            </h3>
+            <p className="project-desc">
+              {dictionary.cards.restaurantRating.description}
+            </p>
+
+            <ul className="project-features">
+              {dictionary.cards.restaurantRating.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
 
             <div className="project-tech-row">
-              <span className="project-tech">Next.js</span>
-              <span className="project-tech">NestJS</span>
-              <span className="project-tech">MongoDB</span>
+              <span className="project-tech">Power BI</span>
+              <span className="project-tech">DAX</span>
+              <span className="project-tech">Python</span>
+              <span className="project-tech">Pandas</span>
+              <span className="project-tech">Scikit-learn</span>
+              <span className="project-tech">Seaborn</span>
+              <span className="project-tech">Data Visualization</span>
             </div>
           </div>
 
           <div className="project-links">
             <a
-              href="https://wie-act-esprit.vercel.app"
+              href="https://vimeo.com/1188407986?share=copy&fl=sv&fe=ci#t=0"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
             >
-              {dictionary.cards.agriHope.linkLabel}
+              {dictionary.cards.restaurantRating.linkLabel}
             </a>
           </div>
         </article>
@@ -104,6 +118,33 @@ export default function Projects({ dictionary }: ProjectsProps) {
             </a>
           </div>
         </article>
+
+        {/* Project 4 – Agri-Hope */}
+        <article className="project-card">
+          <div>
+            <div className="project-pill">{dictionary.cards.agriHope.pill}</div>
+            <h3 className="project-title">{dictionary.cards.agriHope.title}</h3>
+            <p className="project-desc">{dictionary.cards.agriHope.description}</p>
+
+            <div className="project-tech-row">
+              <span className="project-tech">Next.js</span>
+              <span className="project-tech">NestJS</span>
+              <span className="project-tech">MongoDB</span>
+            </div>
+          </div>
+
+          <div className="project-links">
+            <a
+              href="https://wie-act-esprit.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              {dictionary.cards.agriHope.linkLabel}
+            </a>
+          </div>
+        </article>
+
       </div>
     </section>
   );

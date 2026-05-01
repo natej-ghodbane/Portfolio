@@ -77,6 +77,18 @@
           "Interface web Next.js interactive"
         ],
         "linkLabel": "Video demo"
+      },
+      "restaurantRating": {
+        "pill": "Dashboard BI • ML",
+        "title": "Tableau de bord d’analyse des restaurants",
+        "description": "Tableau de bord interactif réalisé avec Power BI pour analyser la satisfaction des restaurants, les profils clients, les préférences culinaires, les prix, le parking et les moyens de transport. Le projet intègre aussi des visualisations Python basées sur le machine learning pour étudier les facteurs influençant la note globale et la prédiction de cuisine.",
+        "features": [
+          "Création de tableaux de bord interactifs pour directeur, responsable qualité, marketing, client et machine learning.",
+          "Développement de mesures DAX pour la satisfaction, l’insatisfaction, les avis positifs, la satisfaction alimentaire, la satisfaction du service et l’adéquation offre-préférences.",
+          "Analyse du comportement client selon l’âge, le budget, le statut marital, le niveau de consommation, le statut fumeur, la cuisine préférée et le moyen de transport.",
+          "Intégration de visuels Python avec pandas, scikit-learn, matplotlib et seaborn pour l’importance des variables et la prédiction de rating."
+        ],
+        "linkLabel": "Video demo"
       }
     }
   },
