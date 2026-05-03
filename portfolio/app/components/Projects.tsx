@@ -1,4 +1,5 @@
 import type { Dictionary } from "@/lib/get-dictionary";
+import ImageGallery from "./ImageGallery";
 
 type ProjectsProps = {
   dictionary: Dictionary["projects"];
@@ -45,8 +46,8 @@ export default function Projects({ dictionary }: ProjectsProps) {
         </article>
 
         {/* Project 2 – Restaurant Rating Dashboard */}
-        <article className="project-card">
-          <div>
+        <article className="project-card project-card-with-gallery">
+          <div className="project-card-content">
             <div className="project-pill">{dictionary.cards.restaurantRating.pill}</div>
             <h3 className="project-title">
               {dictionary.cards.restaurantRating.title}
@@ -70,6 +71,10 @@ export default function Projects({ dictionary }: ProjectsProps) {
               <span className="project-tech">Seaborn</span>
               <span className="project-tech">Data Visualization</span>
             </div>
+          </div>
+
+          <div className="project-hover-gallery">
+            <ImageGallery variant="hover" />
           </div>
 
           <div className="project-links">
