@@ -18,7 +18,7 @@ export default async function RootLayout({
   const htmlLang = isLocale(localeCookie ?? "") ? localeCookie : DEFAULT_LOCALE;
 
   return (
-    <html lang={htmlLang}>
+    <html lang={htmlLang} suppressHydrationWarning>
       <body className="app-root">{children}</body>
     </html>
   );

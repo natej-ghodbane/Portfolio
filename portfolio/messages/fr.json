@@ -89,6 +89,18 @@
           "Intégration de visuels Python avec pandas, scikit-learn, matplotlib et seaborn pour l’importance des variables et la prédiction de rating."
         ],
         "linkLabel": "Video demo"
+      },
+      "firmaa": {
+        "pill": "AI • IoT • Smart Agriculture",
+        "title": "FIRMAA – Intelligent Agriculture Platform",
+        "description": "AI-powered smart agriculture platform combining web, mobile, IoT, and machine learning to help farmers optimize irrigation, detect crop and poultry diseases, classify harmful insects, and monitor livestock health.",
+        "features": [
+          "Autonomous irrigation agent using soil moisture, weather, crop needs, and sensor data",
+          "Crop and chicken disease detection from images, with offline AI support on mobile",
+          "Livestock health prediction based on symptoms and insect classification from sound",
+          "Web dashboard, mobile app, 3D farm view, and IoT-based real-time monitoring"
+        ],
+        "linkLabel": "View Project"
       }
     }
   },
